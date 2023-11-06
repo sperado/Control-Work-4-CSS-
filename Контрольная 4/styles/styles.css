@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunitoregular.woff");
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunitobold.woff");
+    font-weight: bold;
+}
+
+
+
+
+body {
+    font-family: Nunito, sans-serif;
+  overflow-x:  hidden;
+    max-width: 100%;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.sidebar {
+    width: 250px;
+    background: #F7F7F7;
+    position: relative;
+    flex-shrink: 0;
+    border-right: 1px solid #E2E2E2;
+}
+
+.logo {
+    padding: 26px 0;
+    text-align: center;
+    display: block;
+}
+
+.navigation {
+    margin-bottom: 597px;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation-item {
+    margin: 0 17px;
+}
+
+.navigation-item a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    padding: 13px 15px;
+}
+.active {
+    color: white !important;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.navigation-item a span {
+    color: #858796;
+    font-size: 14px;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+.active-item {
+    border-radius: 5px;
+    background: #467DF2;
+}
+
+.menu-item-3:hover .menu-item-3-result{
+    display: block;
+}
+
+.navigation-item:hover{
+    border-radius: 5px;
+    background: #467DF2;
+}
+
+.navigation-item:hover .navigation-span{
+    color:white;
+}
+
+.navigation-item:hover svg{
+    fill:white;
+}
+
+
+.feedback {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 17px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 216px;
+    padding:14px 7px 13px 10px;
+}
+
+.feedback svg {
+    float:left;
+}
+
+.feedback-span-1, .feedback-span-2, .feedback-span-3 {
+    margin-left: 6px;
+}
+
+.feedback-span-4 a {
+    text-decoration: none;
+    color: #0042EB;
+    font-size: 16px;
+    line-height: normal;
+}
+
+.feedback span {
+    color: #4F4E4F;
+    font-size: 16px;
+    line-height: normal;
+}
+
+.feedback:hover {
+    border-radius: 5px;
+    border: 1px solid #467DF2;
+    cursor: help
+}
+
+.content {
+    flex-grow:1 ;
+}
+
+.header {
+    position: relative;
+    background: #F7F7F7;
+    padding: 15px 40px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #E2E2E2;
+
+}
+
+
+.menu {
+    display: flex;
+}
+
+.menu-item-1 {
+    margin-top:5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+.menu-item-2 {
+    margin-top:5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 40px;
+    color: #858796;
+    font-size: 14px;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.menu-item-2 span:hover {
+    color: #3D63D2;
+    font-size: 14px;
+    line-height: normal;
+}
+
+
+.menu-item-3 {
+    margin-top:5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 730px;
+    position: relative;
+}
+
+
+
+
+
+.menu-item-3 span {
+ margin-right: 7px;
+    color: #858796;
+    font-size: 14px;
+    line-height: normal;
+    text-align: center;
+}
+
+.menu-item-3 svg {
+    padding-top:4px
+}
+
+.menu-item-3 span:hover,svg:hover {
+    color:#3D63D2;
+    fill:#3D63D2;
+}
+
+.menu-item-3-result {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(102, 102, 102, 0.15);
+    padding: 30px 30px 15px 20px;
+    width: 150px;
+    height: 113px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    margin-top: 31px;
+    margin-left:80px;
+}
+
+.menu-item-3-result-item {
+    color: #686464;
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.menu-item-3:hover .menu-item-3-result{
+    display: block;
+}
+
+
+
+.search {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.search-input {
+    border-radius: 10px;
+    border: 1px solid #E2E2E2;
+    background: #EFEFF5;
+    width: 373px;
+    margin-right: 40px;
+    padding: 11px 0px 11px 40px;
+    color: #000000;
+    font-size: 14px;
+    line-height: normal;
+    outline: none;
+}
+
+.search-info {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.search-input::placeholder {
+    color: #B3B3B3;
+}
+
+.search-statistics {
+    margin-right: 40px;
+    margin-top: 10px;
+}
+
+.search-statistics svg:hover {
+    cursor: pointer;
+    fill: #467DF2;
+}
+
+
+.search-upload {
+    border-radius: 10px;
+    background: #467DF2;
+    padding: 11px 18px;
+}
+
+.search-upload span {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.fa {
+    background: url("../images/miscellaneous 1.svg") no-repeat;
+
+}
+
+.search-info {
+        position: relative;
+}
+
+.search-info i {
+
+  position: absolute;
+    left: 0;
+    padding: 8px 10px;
+    margin-left: 20px;
+}
+
+
+.search-upload:hover {
+    border-radius: 10px;
+    background: #2F54A3;
+    cursor: pointer;
+}
+
+
+.container  {
+    padding: 25px 76px 93px 40px;
+}
+
+.container h1 {
+    color: #4F4E4F;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+
+
+.house {
+    width: 350px;
+    height: 367px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(102, 102, 102, 0.15);
+    position: relative;
+    display: inline-block;
+    margin-right: 29px;
+    margin-bottom: 33px;
+}
+
+.house img {
+    border-radius: 5%;
+}
+
+.text-bold {
+    color: #4F4E4F;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px; /* 138.889% */
+    width: 296px;
+    top: 227px;
+    left: 27px;
+    position: absolute;
+}
+
+.text-time {
+    position: absolute;
+    top:285px;
+    left:27px;
+    color: #4F4E4F;
+    font-size: 15px;
+    line-height: 30px; /* 200% */
+}
+
+.house-icons {
+    position: absolute;
+    bottom: 20px;
+    left:27px;
+
+}
+
+.house-icon-1, .house-icon-2, .house-icon-3, .house-icon-4, .house-icon-5 {
+    display: inline-block;
+    margin-right: 36px;
+}
+
+.house-icon-1:hover, .house-icon-2:hover, .house-icon-3:hover, .house-icon-4:hover, .house-icon-5:hover {
+    cursor: pointer;
+    fill:#467DF2;
+}
+
+.house-icon-5 {
+    position: absolute;
+    margin-bottom: 28px;
+}
+
+.house-4, .house-8 {
+    margin-right: 0;
+}
+
+.houses {
+    display: inline-block;
+    margin-left: 35px;
+    margin-top:33px;
+}
+
+.house-info-moderation {
+    position: absolute;
+    border-radius: 5px;
+    background: rgba(247, 247, 247, 0.80);
+    width: 115px;
+    height: 22px;
+    text-align: center;
+    top: 10px;
+    left:12px;
+}
+
+.house-info-moderation span {
+    color: #4F4E4F;
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+    padding: 4px 10px;
+}
+
+.house-info-published {
+    position: absolute;
+    width: 83px;
+    height: 22px;
+    border-radius: 5px;
+    background: #C6E0C3;
+    top: 10px;
+    left:12px;
+    text-align: center;
+}
+
+.house-info-published span {
+    color: #027900;
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+}
+
+.house-info-error {
+    position: absolute;
+    width: 118px;
+    height: 22px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: rgba(255, 188, 188, 0.80);
+    top: 10px;
+    left:12px;
+    text-align: center;
+}
+
+.house-info-error span {
+    color: #DB0C0C;
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+}
+
+.button-support {
+    position: fixed;
+    transform: rotate(-90deg);
+    right:-75px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-support button {
+    position: relative;
+    width: 186px;
+    height: 39px;
+    border-radius: 10px 10px 0px 0px;
+    background: #467DF2;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button-support span {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    transform: rotate(-90deg);
+    text-align: center;
+    margin-left:10px
+
+}
+
+.button-support svg {
+    transform: rotate(90deg);
+
+}
+
+.button-support button:hover {
+    border-radius: 10px 10px 0px 0px;
+    background: #2F54A3;
+    cursor: pointer;
+}
+
+.house img:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
